@@ -1,0 +1,49 @@
+body {
+    background-color: #1E3E59;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.menu-bar {
+    height: 10%;
+    width: 100%;
+    background-color: #F24F13;
+    border-radius: 10%/100%;
+}
+
+.menu-bar.top-bar {
+    transition: transform 0.5s;
+}
+
+.expanded .menu-bar.top-bar {
+    transform: translateY(450%) rotate(135deg) scaleX(1.35);
+}
+
+.menu-bar.middle-bar {
+    transition: opacity 0.5s;
+}
+
+.expanded .menu-bar.middle-bar {
+    opacity: 0;
+}
+
+.menu-bar.bottom-bar {
+    transition: transform 0.5s;
+}
+
+.expanded .menu-bar.bottom-bar {
+    transform: translateY(-450%) rotate(-135deg) scaleX(1.35);
+}
